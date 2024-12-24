@@ -8,8 +8,9 @@ public abstract class KhachHang {
 	private String phone;
 	private String email;
 	private String address;
+	private int vipLevel;
  
-	public KhachHang(String id, String name, String dob, String cccd, String phone, String email, String address) {
+	public KhachHang(String id, String name, String dob, String cccd, String phone, String email, String address, int vipLevel) {
     	this.id= id;
         this.name = name;
     	this.dob = dob;
@@ -17,6 +18,7 @@ public abstract class KhachHang {
         this.phone = phone;
         this.email = email;
         this.address = address;
+        this.vipLevel = vipLevel;
 	}
  
 	public abstract void displayInfo();
@@ -90,5 +92,13 @@ public abstract class KhachHang {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public void setVIPLEVEL(int vipLevel) {
+		this.vipLevel = vipLevel;
+	}
+	
+	public int getVIPLEVEL() {
+		return vipLevel;
 	}
 }
